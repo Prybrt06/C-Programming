@@ -39,4 +39,6 @@ int main()
 
     printf("The varience is : %f\n",varience);
     printf("The Standard Daviation is : %f\n",standardDaviation);
+
+    return 0;
 }
