@@ -22,4 +22,6 @@ int main()
     int ans = max(max(n1,n2),max(n3,n4));
 
     printf("%d",ans);
+
+    return 0;
 }
