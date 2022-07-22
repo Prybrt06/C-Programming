@@ -1,14 +1,15 @@
 #include<stdio.h>
+#include<math.h>
 
 int isPrime(int a)
 {
-    int check = 0;
+    int check = 1;
 
-    for(int i=2;i<a;i++)
+    for(int i=2;i<=sqrt(a);i++)
     {
         if(a%i==0)
         {
-            check = 1;
+            check = 0;
             break;
         }
     }
@@ -20,7 +21,7 @@ int main()
 {
     int ans = 0;
 
-    for(int i=50;i<=500;i++)
+    for(int i=10;i<=20;i++)
     {
         if(isPrime(i)==1)
         {
@@ -28,5 +29,5 @@ int main()
         }
     }
 
-    printf("%d",ans);
+    printf("%d\n",ans);
 }

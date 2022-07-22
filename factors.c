@@ -9,10 +9,14 @@ int main()
     int evenSum = 0;
     int oddSum = 0;
 
-    for(int i=1;i<=(a/2);i++)
+    int noOfFactors = 0;
+
+    for(int i=1;i<=a;i++)
     {
         if(a%i==0)
         {
+            noOfFactors++;
+
             if(i%2==0)
             {
                 evenSum += i;
@@ -27,19 +31,11 @@ int main()
         }
     }
 
-    int noOfDigits = 0;
     int temp = a;
 
-    while(temp!=0)
-    {
-        noOfDigits++;
+    float avg = (1.0*sum)/noOfFactors;
 
-        temp /= 10;        
-    }
-
-    int avg = (1.0*sum)/noOfDigits;
-
-    printf("Sum of Even factors : %d\nSum of Odd factors : %d\nAverage of all factors : %d\n",evenSum,oddSum,avg);
+    printf("Sum of Even factors : %d\nSum of Odd factors : %d\nAverage of all factors : %f\n",evenSum,oddSum,avg);
 
     return 0;
 }
